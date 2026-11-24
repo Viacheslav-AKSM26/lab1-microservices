@@ -13,7 +13,7 @@
             "type": "text/javascript",
             "exec": [
               "pm.test(\"Status is 200\", function () { pm.response.to.have.status(200); });",
-              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(1); });"
+              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(8); });"
             ]
           }
         }
@@ -22,7 +22,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:8001/stock/101"
+          "raw": "http://localhost:8008/stock/801"
         }
       }
     },
@@ -35,7 +35,7 @@
             "type": "text/javascript",
             "exec": [
               "pm.test(\"Status is 200\", function () { pm.response.to.have.status(200); });",
-              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(1); });"
+              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(8); });"
             ]
           }
         }
@@ -49,11 +49,11 @@
           }
         ],
         "url": {
-          "raw": "http://localhost:8001/stock/update"
+          "raw": "http://localhost:8008/stock/update"
         },
         "body": {
           "mode": "raw",
-          "raw": "{\"product_id\": 102, \"delta\": 10}",
+          "raw": "{\"product_id\": 802, \"delta\": 10}",
           "options": {
             "raw": {
               "language": "json"
@@ -71,7 +71,7 @@
             "type": "text/javascript",
             "exec": [
               "pm.test(\"Status is 200\", function () { pm.response.to.have.status(200); });",
-              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(1); });",
+              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(8); });",
               "pm.test(\"Total price is 2000\", function () { pm.expect(pm.response.json().total_price).to.eql(2000); });"
             ]
           }
@@ -86,11 +86,11 @@
           }
         ],
         "url": {
-          "raw": "http://localhost:9001/orders"
+          "raw": "http://localhost:9008/orders"
         },
         "body": {
           "mode": "raw",
-          "raw": "{\"product_id\": 101, \"quantity\": 2}",
+          "raw": "{\"product_id\": 801, \"quantity\": 2}",
           "options": {
             "raw": {
               "language": "json"
@@ -108,7 +108,7 @@
             "type": "text/javascript",
             "exec": [
               "pm.test(\"Status is 400\", function () { pm.response.to.have.status(400); });",
-              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(1); });"
+              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(8); });"
             ]
           }
         }
@@ -122,11 +122,11 @@
           }
         ],
         "url": {
-          "raw": "http://localhost:9001/orders"
+          "raw": "http://localhost:9008/orders"
         },
         "body": {
           "mode": "raw",
-          "raw": "{\"product_id\": 103, \"quantity\": 1}",
+          "raw": "{\"product_id\": 803, \"quantity\": 1}",
           "options": {
             "raw": {
               "language": "json"
@@ -144,7 +144,7 @@
             "type": "text/javascript",
             "exec": [
               "pm.test(\"Status is 400\", function () { pm.response.to.have.status(400); });",
-              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(1); });"
+              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(8); });"
             ]
           }
         }
@@ -158,7 +158,7 @@
           }
         ],
         "url": {
-          "raw": "http://localhost:9001/orders"
+          "raw": "http://localhost:9008/orders"
         },
         "body": {
           "mode": "raw",
@@ -180,8 +180,8 @@
             "type": "text/javascript",
             "exec": [
               "pm.test(\"Status is 200\", function () { pm.response.to.have.status(200); });",
-              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(1); });",
-              "pm.test(\"One order exists\", function () { pm.expect(pm.response.json().orders.length).to.eql(1); });"
+              "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(8); });",
+              "pm.test(\"One order exists\", function () { pm.expect(pm.response.json().orders.length).to.eql(8); });"
             ]
           }
         }
@@ -190,7 +190,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:9001/orders"
+          "raw": "http://localhost:9008/orders"
         }
       }
     }
