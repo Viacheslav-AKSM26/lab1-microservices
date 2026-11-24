@@ -21,9 +21,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": {
-          "raw": "http://localhost:8008/stock/801"
-        }
+        "url": "http://localhost:8008/stock/801"
       }
     },
     {
@@ -48,9 +46,7 @@
             "value": "application/json"
           }
         ],
-        "url": {
-          "raw": "http://localhost:8008/stock/update"
-        },
+        "url": "http://localhost:8008/stock/update",
         "body": {
           "mode": "raw",
           "raw": "{\"product_id\": 802, \"delta\": 10}",
@@ -85,9 +81,7 @@
             "value": "application/json"
           }
         ],
-        "url": {
-          "raw": "http://localhost:9008/orders"
-        },
+        "url": "http://localhost:9008/orders",
         "body": {
           "mode": "raw",
           "raw": "{\"product_id\": 801, \"quantity\": 2}",
@@ -121,9 +115,7 @@
             "value": "application/json"
           }
         ],
-        "url": {
-          "raw": "http://localhost:9008/orders"
-        },
+        "url": "http://localhost:9008/orders",
         "body": {
           "mode": "raw",
           "raw": "{\"product_id\": 803, \"quantity\": 1}",
@@ -157,9 +149,7 @@
             "value": "application/json"
           }
         ],
-        "url": {
-          "raw": "http://localhost:9008/orders"
-        },
+        "url": "http://localhost:9008/orders",
         "body": {
           "mode": "raw",
           "raw": "{\"product_id\": 999, \"quantity\": 1}",
@@ -189,9 +179,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": {
-          "raw": "http://localhost:9008/orders"
-        }
+        "url": "http://localhost:9008/orders"
       }
     }
   ]
