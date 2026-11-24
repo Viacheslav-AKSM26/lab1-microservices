@@ -171,7 +171,7 @@
             "exec": [
               "pm.test(\"Status is 200\", function () { pm.response.to.have.status(200); });",
               "pm.test(\"Response contains student_id\", function () { pm.expect(pm.response.json().student_id).to.eql(8); });",
-              "pm.test(\"One order exists\", function () { pm.expect(pm.response.json().orders.length).to.eql(8); });"
+              "pm.test(\"One order exists\", function () { pm.expect(pm.response.json().orders.length).to.eql(1); });"
             ]
           }
         }
