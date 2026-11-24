@@ -1,0 +1,27 @@
+@startuml
+title Створення замовлення (POST /orders)
+actor "Postman" as C
+participant "Order Service\n(порт 9000+N)" as O
+participant "Inventory Service\n(порт 8000+N)" as I
+database "Сховище\n(STOCK)" as D
+
+C -> O : POST /orders {product_id, quantity}
+activate O
+O -> I : GET /stock/{product_id}
+activate I
+I -> D : читання залишку
+D --> I : дані товару
+alt товар не знайдено
+    I --> O : 404 Not Found
+    O --> C : 400 Bad Request (Product does not exist)
+else товару не вистачає
+    I --> O : 200 OK {quantity, price}
+    O --> C : 400 Bad Request (Not enough stock)
+else все добре
+    I --> O : 200 OK {name, quantity, price}
+    deactivate I
+    O -> O : зберегти замовлення в ORDERS
+    O --> C : 200 OK {student_id, order_id, total_price}
+end
+deactivate O
+@enduml
