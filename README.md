@@ -1,4 +1,4 @@
-# Lab 1 (part 2) — Variant 1: Inventory + Order microservices
+# Лабка 1 (part 2) — Варіанти 1: Управління запасами та замовленнями
 
 Run: `docker compose up -d --build`
 Test: `newman run collection.json`
